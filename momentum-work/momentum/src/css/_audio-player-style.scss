@@ -1,0 +1,22 @@
+.player-controls {
+    width: 120px;
+    margin-bottom: 28px;
+    *>{
+        margin-top: 10px;
+    }
+  }
+  
+
+.time-volume-container{
+    display: flex;
+    align-items: center;
+  }
+  .audio-time{
+    display: flex;
+    align-items: center;
+  }
+  .play-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link href="https://css.gg/css?=|play-button-o|play-pause-o|play-track-next-o|play-track-prev-o|volume" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <audio src=""></audio>
+
+      <div class="player-controls">
+        <div class="controls-container">
+          <div class="audio-name"></div>
+          <div class="time-volume-container">         
+            <div class="volume-icon"></div>
+            <div class="audio-volume">
+              <input type="range" value="0.7" min="0" max="1" step="0.1"  class="volume-slider">
+            </div>
+            <div class="audio-time">
+              <div class="audio-time__current">0:00</div>
+              <div class="divider">/</div>
+              <div class="audio-time__length">0:00</div>
+            </div>
+          </div>
+          
+            <input type="range" value="0" min="0" max="100" class="progress-bar">
+         
+          <div class="play-button-container">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+        
+        </div>
+      </div>
+      <div class="play-list-icon"></div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date capitalize"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" placeholder="enter your name" class="name" value=""/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="quote-container">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="my-footer">
+    <div class="settings">
+      <div class="settings-icon"></div>
+      <div class="settings-container hidden">
+        <ul class="settings-menu">
+          <li class="setting-item language">
+            <div class="section-title">Language</div>
+            <label class="radio-container"><span></span> 
+              <input class="input-language" type="radio" checked="checked" value="en" name="radio-lang">
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio-container"><span></span> 
+              <input class="input-language" type="radio" value="ru" name="radio-lang">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li class="setting-item photo-source">
+            <div class="section-title">Photo source</div>
+            <label class="radio-container"><span></span> 
+              <input class="input-photo-source" type="radio" checked="checked" value="github" name="radio-src">
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio-container"><span></span> 
+              <input class="input-photo-source photo-source-api" type="radio" value="unsplash" name="radio-src">
+              <span class="checkmark"></span>
+            </label>
+            <label class="settings-photo-tag" for="photo-tag1"><span></span> 
+              <input id="photo-tag1" class="settings-input" type="text" placeholder="nature" value="">
+              </label>
+            <label class="radio-container"><span></span> 
+              <input class="input-photo-source photo-source-api" type="radio" value="flickr" name="radio-src">
+              <span class="checkmark"></span>
+            </label>
+            <label class="settings-photo-tag" for="photo-tag2"><span></span> 
+              <input id="photo-tag2" class="settings-input" type="text" placeholder="nature" value="">
+              </label>
+          </li>
+          <li class="setting-item show">
+            <div class="section-title">Show elements</div>
+            <div class="page-items-container">
+              <div class="page-item" id="i_1">
+                <span>Weather widget</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_2">
+                <span>Audio player</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_3">
+                <span>Quote of the day</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_4">
+                <span>Time</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_5">
+                <span>Date</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_6">
+                <span>Greeting</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="page-item" id="i_7">
+                <span>Todo</span>
+                <label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="todo-list">
+      <div class="todo-icon">Todo</div>
+      <div class="todo-content hidden">
+        <div class="todo-container">
+          <div class="section-title">Todo List</div>
+          <div class="input-container"> 
+          <ul class="todos-list">
+
+          </ul>         
+            <input class="input-text todo" type="text" placeholder="todo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="rs-footer">
+      <div class="rs-year">2021</div>
+      <div class="rs-link"><a target="_blank" href="https://rs.school/js/"></a></div>
+      <div class="rs-creator"><a target="_blank" href="https://github.com/AlbinaShaikhutdinova"></a></div>
+    </div>
+  </footer>
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
